@@ -1,0 +1,165 @@
+#cc1214 {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    right: 10%;
+    top: 20%;
+    bottom: 20%;
+    position: fixed;
+    background-color: #002b36;
+    opacity: 0.98;
+    z-index: 99999;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 0 30px #333;
+    display: none;
+    font-family: Menlo, 'Andale Mono', 'Lucida Console', Monaco, monospace;
+}
+#cc1214 * {
+    font-family: Menlo, 'Andale Mono', 'Lucida Console', Monaco, monospace;
+}
+
+#cc1214 input#input_box {
+    width: 100%;
+    position: absolute;
+    border: 0;
+    left: 0;
+    padding: 5px;
+    padding-left: 20px;
+    font-family: Menlo, 'Andale Mono', 'Lucida Console', Monaco, monospace;
+    font-size: 14px;
+    background-color: #073642;
+    bottom: 0;
+    color: #93a1a1;
+    outline-width: 0;
+    margin-bottom: 0;
+    border-top: 1px solid #586e75;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+    z-index: 999990;
+}
+#cc1214 span.input_command_marker {
+    width: 20px;
+    position: absolute;
+    border: 0;
+    left: 0;
+    padding: 5px;
+    font-family: Menlo, 'Andale Mono', 'Lucida Console', Monaco, monospace;
+    font-size: 14px;
+    background-color: transparent !important;
+    bottom: 0;
+    color: #93a1a1;
+    margin-bottom: 0;
+    margin-top: 5px;
+    z-index: 999991;
+}
+#cc1214 div#output_box {
+    width: 100%;
+    position: absolute;
+    border: 0;
+    padding: 5px;
+    font-size: 12px;
+    height: calc(100% - 36px);
+    top: 0;
+    left: 0;
+    color: #839496;
+    overflow: auto;
+}
+
+#cc1214 div.logo {
+    font-family: Menlo, 'Andale Mono', 'monospace';
+    white-space: pre;
+    font-size: 12px;
+    text-align: left;
+    line-height: 14px;
+    display: none;
+}
+
+#cc1214 div#output_box div.output_line {
+    line-height: 12px;
+    margin: 2px;
+    text-align: left;
+    padding: 0;
+}
+#cc1214 div#output_box a, #cc1214 div#output_box a:hover {
+    color: #268bd2 !important;
+    text-decoration: none !important;
+}
+#cc1214 div#output_box div.output_line:empty {
+    line-height: 12px;
+    height: 12px;
+}
+#cc1214 div#close {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-family: 'Fredoka One', sans-serif;
+    color: #586e75;
+    font-size: 28px;
+    text-align: center;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    tgftext-shadow: 0px 0px 3px #586e75;
+    background-color: transparent;
+}
+#cc1214 div.row {
+    height: 44px;
+    line-height: 44px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+#cc1214 div#output_box img.flag {
+    height: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#cc1214 div#output_box span.command_marker {
+    color: #dc322f;
+}
+#cc1214 span.later_tags {
+    margin-left: 15px;
+}
+#cc1214 span.later_tags_bracket {
+    color: #dc322f;
+}
+
+#cc1214 span.help_usage {
+    white-space: pre;
+    color: #6c71c4;
+    margin-left: 15px;
+}
+#cc1214 span.help_description {
+    white-space: pre;
+    color: #839496;
+}
+#cc1214 span.note_text {
+    color: #839496;
+    margin-left: 10px;
+}
+#cc1214 span.note_date {
+    color: #dc322f;
+    margin-left: 15px;
+}
+
+#cc1214 ::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #002b36;
+}
+#cc1214 ::-webkit-scrollbar-thumb {
+    background: #073642;
+    border-radius: 1ex;
+    box-shadow: 0px 1px 2px rgba(0, 43, 54, 0.75);
+}
+#cc1214 ::-webkit-scrollbar-corner {
+    background: #002b36;
+}

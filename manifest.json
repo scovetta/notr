@@ -1,0 +1,30 @@
+{
+  "name" : "Notr",
+  "version" : "1.0",
+  "description" : "Notr provides a textual interface for associating metadata with web-resources. This metadata includes both public information (notes, tags, links) and private information (reading list).",
+  "background" : {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  },
+  "homepage_url": "http://notr.negativefoo.org",
+  "offline_enabled": false,
+  "permissions" : [ "http://*/*", "https://*/*" ],
+  "icons" : {
+    "16" : "images/notr-logo-16.png",
+    "48" : "images/notr-logo-48.png",
+    "128" : "images/notr-logo-128.png"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+         "http://*/*",
+         "https://*/*"
+      ],
+      "js" : [ "scripts/jquery-2.1.1.min.js", "scripts/notr.js" ],
+      "css": [ "scripts/notr.css" ],
+      "run_at" : "document_idle"
+    }
+  ],
+  "manifest_version": 2,
+  "web_accessible_resources": ["images/flag.png"]
+}
