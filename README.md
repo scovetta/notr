@@ -15,7 +15,7 @@ Using Notr
 Once the Chrome extension is installed, it can be activated by pressing the Ctrl
 or Cmd key twice (tap-tap). A popup window should appear similar to the one below.
 
-![Alt text](/scovetta/notr/master/images/screenshot-1png?raw=true "Screenshot")
+![Alt text](https://raw.githubusercontent.com/scovetta/notr/master/images/screenshot-1.png "Screenshot")
 
 Whenever a command is typed and you press 'enter', a command is sent to the Notr
 server (https://notr.info), and a response is returned back to you. No caching
