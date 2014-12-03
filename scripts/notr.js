@@ -1,6 +1,6 @@
 /*!
- * Notr (http://notr.negativefoo.org)
- * Copyright 2014 Negativefoo.org
+ * Notr (https://notr.info)
+ * Copyright 2014 notr.org
  * Licensed under 2-Clause BSD.
  */
 
@@ -18,7 +18,8 @@ function Notr() {
     /* Generic configuration */
     this.config = {
         'trigger_keycodes': [17, 91],
-        'keypress_timeout': 500
+        'keypress_timeout': 500,
+        'server_endpoint': 'https://notr.info/api/1/'
     };
 
     /**
@@ -130,7 +131,7 @@ function Notr() {
                 var tags = cmd.split(' ').slice(1);
                 $.ajax({
                     dataType: "json",
-                    url: "http://notr.negativefoo.org/index.php",
+                    url: that.config.server_endpoint,
                     type: 'POST',
                     data: {'action': 'add_tags',
                            'url': that.get_current_url(),
@@ -163,7 +164,7 @@ function Notr() {
             'execute': function(cmd, cmd_clean) {
                 $.ajax({
                     dataType: "json",
-                    url: "http://notr.negativefoo.org/index.php",
+                    url: that.config.server_endpoint,
                     type: 'POST',
                     data: {'action': 'get_tags',
                            'installation_id': that.installation_id,
@@ -197,7 +198,7 @@ function Notr() {
                 var link = cmd.split(' ').slice(1).join('');
                 $.ajax({
                     dataType: "json",
-                    url: "http://notr.negativefoo.org/index.php",
+                    url: that.config.server_endpoint,
                     type: 'POST',
                     data: {'action': 'add_link',
                            'installation_id': that.installation_id,
@@ -226,7 +227,7 @@ function Notr() {
             'execute': function(cmd, cmd_clean) {
                 $.ajax({
                     dataType: "json",
-                    url: "http://notr.negativefoo.org/index.php",
+                    url: that.config.server_endpoint,
                     type: 'POST',
                     data: {'action': 'get_links',
                            'url': that.get_current_url()},
@@ -257,7 +258,7 @@ function Notr() {
             'execute': function(cmd, cmd_clean) {
                 $.ajax({
                     dataType: "json",
-                    url: "http://notr.negativefoo.org/index.php",
+                    url: that.config.server_endpoint,
                     type: 'POST',
                     data: {'action': 'add_read_later',
                            'url': that.get_current_url(),
@@ -287,7 +288,7 @@ function Notr() {
                 var search = cmd.split(' ').slice(1).join(' ') || null;
                 $.ajax({
                     dataType: "json",
-                    url: "http://notr.negativefoo.org/index.php",
+                    url: that.config.server_endpoint,
                     type: 'POST',
                     data: {'action': 'get_read_later',
                            'search': search,
@@ -333,7 +334,7 @@ function Notr() {
                 var note = cmd.split(' ').slice(1).join(' ');
                 $.ajax({
                     dataType: "json",
-                    url: "http://notr.negativefoo.org/index.php",
+                    url: that.config.server_endpoint,
                     type: 'POST',
                     data: {'action': 'add_note',
                            'url': that.get_current_url(),
@@ -364,7 +365,7 @@ function Notr() {
                 var search = cmd.split(' ').slice(1).join(' ');
                 $.ajax({
                     dataType: "json",
-                    url: "http://notr.negativefoo.org/index.php",
+                    url: that.config.server_endpoint,
                     type: 'POST',
                     data: {'action': 'get_notes',
                            'url': that.get_current_url(),
@@ -388,7 +389,7 @@ function Notr() {
                             $flag_link.on('click', function(evt) {
                                 $.ajax({
                                     dataType: "json",
-                                    url: "http://notr.negativefoo.org/index.php",
+                                    url: that.config.server_endpoint,
                                     type: 'POST',
                                     data: {'action': 'flag_note',
                                            'url': that.get_current_url(),
@@ -511,7 +512,7 @@ function Notr() {
         // Add CSS for custom web fonts
         var $head = $("head");
         var $headlinklast = $head.find('link[rel="stylesheet"]:last');
-        var linkElement = '<link href="//fonts.googleapis.com/css?family=Fredoka+One|Source+Code+Pro" rel="stylesheet" type="text/css"/>';
+        var linkElement = '<link href="//fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" type="text/css"/>';
         if ($headlinklast.length) {
            $headlinklast.after(linkElement);
         }

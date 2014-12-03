@@ -1,12 +1,12 @@
 {
   "name" : "Notr",
   "version" : "1.0",
-  "description" : "Notr provides a textual interface for associating metadata with web-resources. This metadata includes both public information (notes, tags, links) and private information (reading list).",
+  "description" : "Notr provides a text-based interface for managing URL-based metadata such as tags, associated links, and public notes. All content submitted using notr.info is accessible to other Notr users.",
   "background" : {
     "scripts": ["scripts/background.js"],
     "persistent": false
   },
-  "homepage_url": "http://notr.negativefoo.org",
+  "homepage_url": "https://notr.info/",
   "offline_enabled": false,
   "permissions" : [ "http://*/*", "https://*/*" ],
   "icons" : {
