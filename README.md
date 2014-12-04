@@ -9,6 +9,12 @@ Notr is currently only available for Google Chrome (desktop). It has been
 tested and should work on Windows, OS X, and Linux.
 
 
+Installation
+============
+
+You can install Notr from the <a href="https://chrome.google.com/webstore/detail/notr/phflfelolhkljldblpfpoganbjapaklo">Google Chrome Store</a>.
+
+
 Using Notr
 ==========
 
